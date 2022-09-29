@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         backgroundColor: Colors.black,
         title: const Text(
-          'Home',
+          'HOME',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -25,11 +25,20 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: Column(
-        children: const [
-          Text(
-            'Hello !',
-            style: TextStyle(color: Colors.black),
-          )
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Hello !',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
         ],
       ),
     );
