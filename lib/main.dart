@@ -131,8 +131,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 const Divider(
                   color: Colors.black,
-                  indent: 80,
-                  endIndent: 80,
+                  indent: 100,
+                  endIndent: 100,
                   height: 20,
                 ),
                 Padding(
@@ -167,12 +167,18 @@ class _MyHomePageState extends State<MyHomePage> {
                         MaterialPageRoute(builder: (context) => HomePage()),
                       );
                     },
-                    child: Text(
-                      'COMMENCER    >',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'COMMENCER',
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                        Icon(Icons.arrow_right),
+                      ],
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
