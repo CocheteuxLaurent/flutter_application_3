@@ -1,5 +1,6 @@
-import 'dart:ui';
+//import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/HomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -153,9 +154,25 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(12.0),
-                      child: TextButton(
-                        child: const Text('COMMENCER   >'),
-                        onPressed: () {},
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        },
+                        child: Text(
+                          'COMMENCER    >',
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          elevation: 2,
+                          shape: StadiumBorder(),
+                        ),
                       ),
                     ),
                   ],
