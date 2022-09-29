@@ -138,6 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           borderRadius: BorderRadius.circular(20),
                         ),
                         labelText: 'USERNAME',
+                        labelStyle: TextStyle(fontWeight: FontWeight.bold),
                       )),
                     ),
                     Padding(
@@ -171,7 +172,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black,
                           elevation: 2,
-                          shape: StadiumBorder(),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
                         ),
                       ),
                     ),
