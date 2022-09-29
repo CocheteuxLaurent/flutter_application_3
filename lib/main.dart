@@ -129,6 +129,35 @@ class _MyHomePageState extends State<MyHomePage> {
                       endIndent: 80,
                       height: 20,
                     ),
+                    Padding(
+                      padding: EdgeInsets.all(12.0),
+                      child: TextField(
+                          decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        labelText: 'USERNAME',
+                      )),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(12.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          labelText: 'PASSWORD',
+                          labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: TextButton(
+                        child: const Text('COMMENCER   >'),
+                        onPressed: () {},
+                      ),
+                    ),
                   ],
                 ),
               ),
