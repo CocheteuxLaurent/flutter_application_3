@@ -98,13 +98,38 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.all(80.0),
+              padding: const EdgeInsets.all(40.0),
               child: Container(
-                width: 200,
-                height: 200,
-                color: Colors.red,
+                width: 300,
+                height: 300,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
+                  color: Colors.grey,
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'LOGIN',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 22,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Divider(
+                      color: Colors.black,
+                      indent: 80,
+                      endIndent: 80,
+                      height: 20,
+                    ),
+                  ],
                 ),
               ),
             )
