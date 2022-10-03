@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: const [
                     Text(
-                      "IT' S",
+                      'SEARCH',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 22,
@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: const [
                     Text(
-                      'LAURENT',
+                      'YOUR',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 22,
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: const [
                     Text(
-                      'COCHETEUX',
+                      'MOVIES',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 22,
@@ -105,91 +105,105 @@ class _MyHomePageState extends State<MyHomePage> {
           const SizedBox(
             height: 100,
           ),
+          Text(
+            'Sign In',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 25),
+            child: Divider(
+              indent: 140,
+              endIndent: 140,
+              color: Colors.black,
+            ),
+          ),
           Container(
-            width: 300,
-            height: 300,
+            width: 280,
+            height: 150,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: HexColor("#D9D9D9"),
             ),
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(
-                        'LOGIN',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const Divider(
-                  color: Colors.black,
-                  indent: 100,
-                  endIndent: 100,
-                  height: 20,
-                ),
                 Padding(
                   padding: EdgeInsets.all(12.0),
                   child: TextField(
-                      decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      contentPadding: EdgeInsets.all(8.0),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide.none,
+                      ),
+                      labelText: 'Enter username',
+                      labelStyle: TextStyle(fontSize: 12),
                     ),
-                    labelText: 'USERNAME',
-                    labelStyle: TextStyle(fontWeight: FontWeight.bold),
-                  )),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.all(12.0),
                   child: TextField(
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      labelText: 'PASSWORD',
-                      labelStyle: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'COMMENCER',
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                        filled: true,
+                        fillColor: Colors.white,
+                        contentPadding: EdgeInsets.all(8.0),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide: BorderSide.none,
                         ),
-                        Icon(Icons.arrow_right),
-                      ],
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      elevation: 2,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
+                        labelText: 'Enter password',
+                        labelStyle: TextStyle(fontSize: 12)),
                   ),
                 ),
               ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 20, left: 10, right: 50, bottom: 50),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  'Mot de passe oublié ?',
+                  style: TextStyle(color: HexColor('767070'), fontSize: 12),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 25),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+              child: Container(
+                width: 170,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'COMMENCER',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    Icon(Icons.arrow_right),
+                  ],
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black,
+                elevation: 2,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
             ),
           )
         ],
