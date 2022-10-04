@@ -51,6 +51,21 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+            GridView.builder(
+                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                    maxCrossAxisExtent: 100,
+                    childAspectRatio: 3 / 2,
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 20),
+                itemCount: 2,
+                itemBuilder: (BuildContext context, index) {
+                  return Card(
+                    child: Text(
+                      'TEST',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  );
+                }),
           ],
         ),
       ),
