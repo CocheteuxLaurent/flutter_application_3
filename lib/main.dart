@@ -43,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController _controller = TextEditingController();
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -129,6 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Padding(
                   padding: EdgeInsets.all(12.0),
                   child: TextField(
+                    controller: _controller,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
@@ -178,7 +180,10 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(
+                      builder: (context) => HomePage(
+                            username: _controller,
+                          )),
                 );
               },
               child: Container(
