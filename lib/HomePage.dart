@@ -23,13 +23,12 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Hello !',
+                  'Hello !' + '  ' + widget.username,
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 24,
                       fontWeight: FontWeight.bold),
                 ),
-                Text(widget.username.toString()),
               ],
             ),
             Padding(

@@ -41,9 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  final TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    final TextEditingController _controller = TextEditingController();
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -182,7 +183,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => HomePage(
-                            username: _controller,
+                            username: _controller.text,
                           )),
                 );
               },
