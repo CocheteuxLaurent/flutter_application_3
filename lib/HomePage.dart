@@ -29,6 +29,7 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 24,
                       fontWeight: FontWeight.bold),
                 ),
+                Text(widget.username.toString()),
               ],
             ),
             Padding(
@@ -66,15 +67,12 @@ class _HomePageState extends State<HomePage> {
                     itemCount: 2,
                     itemBuilder: (BuildContext context, index) {
                       return Card(
-                          child: Column(
-                        children: [
-                          Image.network(
-                            "https://jeunepublic.veocinemas.fr/wp-content/uploads/2021/03/affiche-film-Imitation-Game.jpg",
-                            width: 400,
-                            height: 250,
-                          ),
-                        ],
-                      ));
+                        child: Image.network(
+                          "https://jeunepublic.veocinemas.fr/wp-content/uploads/2021/03/affiche-film-Imitation-Game.jpg",
+                          width: 400,
+                          height: 250,
+                        ),
+                      );
                     }),
               ),
             ),
