@@ -65,12 +65,18 @@ class _HomePageState extends State<HomePage> {
                         mainAxisSpacing: 20),
                     itemCount: 2,
                     itemBuilder: (BuildContext context, index) {
-                      return Card(
-                        child: Image.network(
-                          "https://jeunepublic.veocinemas.fr/wp-content/uploads/2021/03/affiche-film-Imitation-Game.jpg",
-                          width: 400,
-                          height: 250,
-                        ),
+                      return Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              "https://jeunepublic.veocinemas.fr/wp-content/uploads/2021/03/affiche-film-Imitation-Game.jpg",
+                              width: 150,
+                              height: 100,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ],
                       );
                     }),
               ),
