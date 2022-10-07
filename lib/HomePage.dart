@@ -57,37 +57,20 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.only(top: 20, left: 100, right: 110),
-                child: GridView.builder(
-                    gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                        maxCrossAxisExtent: 100,
-                        childAspectRatio: 3 / 2,
-                        crossAxisSpacing: 20,
-                        mainAxisSpacing: 20),
-                    itemCount: 0,
-                    itemBuilder: (BuildContext context, index) {
-                      return Column(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.network(
-                              "https://jeunepublic.veocinemas.fr/wp-content/uploads/2021/03/affiche-film-Imitation-Game.jpg",
-                              width: 150,
-                              height: 100,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.network(
-                              "https://fr.web.img4.acsta.net/c_310_420/medias/04/34/49/043449_af.jpg",
-                              width: 150,
-                              height: 100,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ],
-                      );
-                    }),
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  children: [
+                    ClipRRect(
+                      child: Image.network(
+                        "https://fr.web.img3.acsta.net/c_310_420/o_club-allocine-310x420.png_0_se/pictures/15/01/09/16/14/573252.jpg",
+                      ),
+                    ),
+                    ClipRRect(
+                      child: Image.network(
+                          "https://fr.web.img2.acsta.net/c_310_420/pictures/21/11/16/10/01/4860598.jpg"),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
