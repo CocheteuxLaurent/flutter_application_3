@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                         childAspectRatio: 3 / 2,
                         crossAxisSpacing: 20,
                         mainAxisSpacing: 20),
-                    itemCount: 2,
+                    itemCount: 0,
                     itemBuilder: (BuildContext context, index) {
                       return Column(
                         children: [
@@ -71,6 +71,15 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(10),
                             child: Image.network(
                               "https://jeunepublic.veocinemas.fr/wp-content/uploads/2021/03/affiche-film-Imitation-Game.jpg",
+                              width: 150,
+                              height: 100,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              "https://fr.web.img4.acsta.net/c_310_420/medias/04/34/49/043449_af.jpg",
                               width: 150,
                               height: 100,
                               fit: BoxFit.fill,
