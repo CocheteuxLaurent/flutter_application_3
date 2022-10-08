@@ -59,15 +59,21 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.only(top: 20, left: 100, right: 110),
                 child: GridView.count(
                   crossAxisCount: 2,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
                   children: [
                     ClipRRect(
                       child: Image.network(
                         "https://fr.web.img3.acsta.net/c_310_420/o_club-allocine-310x420.png_0_se/pictures/15/01/09/16/14/573252.jpg",
                       ),
                     ),
+                    //Icon(Icons.favorite),
                     ClipRRect(
                       child: Image.network(
-                          "https://fr.web.img2.acsta.net/c_310_420/pictures/21/11/16/10/01/4860598.jpg"),
+                          "https://fr.web.img2.acsta.net/c_310_420/pictures/21/11/16/10/01/4860598.jpg",
+                          height: 150,
+                          width: 200,
+                          fit: BoxFit.contain),
                     ),
                   ],
                 ),
