@@ -7,15 +7,32 @@ class HomePage extends StatefulWidget {
   const HomePage({Key? key, this.username});
 
   final username;
-
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 1;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.holiday_village))
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [
