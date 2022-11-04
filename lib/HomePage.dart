@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_3/Class/classFilm.dart';
 //import 'package:flutter/src/rendering/box.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key, this.username});
+  const HomePage({Key? key, this.username, this.valeurRecup});
 
+  final valeurRecup;
   final username;
   @override
   State<HomePage> createState() => _HomePageState();
@@ -54,6 +56,7 @@ class _HomePageState extends State<HomePage> {
                 width: 350,
                 height: 50,
                 child: TextField(
+                  controller: widget.valeurRecup,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.black,
@@ -68,31 +71,6 @@ class _HomePageState extends State<HomePage> {
                       size: 25,
                     ),
                   ),
-                ),
-              ),
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 20, left: 100, right: 110),
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  children: [
-                    ClipRRect(
-                      child: Image.network(
-                        "https://fr.web.img3.acsta.net/c_310_420/o_club-allocine-310x420.png_0_se/pictures/15/01/09/16/14/573252.jpg",
-                      ),
-                    ),
-                    //Icon(Icons.favorite),
-                    ClipRRect(
-                      child: Image.network(
-                          "https://fr.web.img2.acsta.net/c_310_420/pictures/21/11/16/10/01/4860598.jpg",
-                          height: 150,
-                          width: 200,
-                          fit: BoxFit.contain),
-                    ),
-                  ],
                 ),
               ),
             ),
